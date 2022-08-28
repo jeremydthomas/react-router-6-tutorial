@@ -9,11 +9,10 @@ const Login = ({ setUser }) => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		if (!name || !email) {
-			return;
-			setUser({ name: name, email: email });
-			navigate("/dashboard");
-		}
+		if (!name || !email) return;
+
+		setUser({ name: name, email: email });
+		navigate("/dashboard");
 	};
 
 	return (
